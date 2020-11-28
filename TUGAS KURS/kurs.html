@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" description="Kurs Mata Uang">
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        input[type=text], input[type=number], select
+            {
+                width: 100%;
+                margin: 10px 0;
+                padding: 10px 20px;
+                box-sizing:border-box;
+            }
+
+        .container
+            {
+                border-radius: 6px;
+                background-color: #f7eded;
+                padding: 53px;
+                width: 50%;
+                margin: auto;
+            }
+
+        h1,h2
+        {
+            text-align: center;
+        }
+
+
+
+
+    </style>
+
+    <title>Kurs Mata Uang</title>
+</head>
+<body>
+        <script>
+            function kursmatauang() {
+                var uang = document.getElementById("amount").value;
+                var valuta = document.getElementById("valuta").value;
+                document.getElementById("nilairupiah").value = uang * valuta;
+            }
+        </script>
+        <div class="container">
+            <h1>Konversi Mata Uang</h1>
+
+            <label>Amount</label>
+            <input type="number" placeholder="Masukkan Angka" name="amount" id="amount">
+            <br/>
+
+            <label>Foreign Exchange Rate</label>
+                <select name="valuta" onchange="kursmatauang()" id="valuta">
+                    <option class="dropdown-item" value="">-- Pilih Mata Uang --</option>
+                    <option value="9915">USD</option>
+                    <option value="13472">SGD</option>
+                    <option value="874">RM</option>
+                    <option value="120">YJP</option>
+                    <option value="15888">EURO</option>
+                    <option value="3592">RAS</option>
+                </select>
+            <br/>
+            
+            <label>Rupiah Value</label>
+            <input type="text" name ="nilairupiah" id="nilairupiah">
+         </div>
+
+
+
+</body>
+</html>

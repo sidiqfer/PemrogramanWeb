@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHATBOX SIDIQ</title>
+    <style>
+        table,
+        th,
+        td {
+                border: 2px solid black;
+                text-align: left;
+                width: 42%;
+                bottom: 2%;
+                right: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function addChat() {
+            var hasil = document.getElementById("hasilChat").innerHTML;
+            var inputValue = document.getElementById("inputChat").value;
+            document.getElementById("hasilChat").innerHTML = hasil + "<br>" + inputValue;
+            document.getElementById("inputChat").value;
+        }
+    </script>
+
+    <table style="position: fixed">
+        <tr>
+            <td>
+                <div id="hasilChat" style="height:400px;overflow:auto;"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input style="width: 97%" type="text" id="inputChat">
+                <button type="button" onclick="addChat()">Kirim</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
